@@ -1,5 +1,5 @@
 {
-  "name": "art_generator",
+  "name": "charming-nft-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,5 +15,6 @@
     "dotenv": "^10.0.0",
     "moralis": "^0.0.104",
     "request": "^2.88.2"
-  }
+  },
+  "keywords": []
 }
