@@ -16,7 +16,7 @@ const {
   height,
   editionSize,
   startEditionFrom,
-  rarityWeights
+  rarityWeights,
 } = require("./input/config.js");
 
 // import metadata
@@ -26,7 +26,7 @@ const { compileMetadata } = require("./src/metadata");
 const { createFile } = require("./src/filesystem");
 
 // setup canvas
-const canvas = createCanvas(width, height);
+const canvas = createCanvas(width, height, "png");
 const ctx = canvas.getContext("2d");
 
 // Moralis creds

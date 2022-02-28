@@ -23,8 +23,8 @@ const drawBackground = (ctx, width, height) => {
 
 // loads an image from the layer path
 // returns the image in a format usable by canvas
-const loadLayerImg = async layer => {
-  return new Promise(async resolve => {
+const loadLayerImg = async (layer) => {
+  return new Promise(async (resolve) => {
     const image = await loadImage(`${layer.selectedElement.path}`);
     resolve({ layer: layer, loadedImage: image });
   });
@@ -45,5 +45,5 @@ module.exports = {
   genColor,
   drawBackground,
   loadLayerImg,
-  drawElement
+  drawElement,
 };

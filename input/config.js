@@ -15,7 +15,7 @@ const addRarity = (_id, _from, _to) => {
     value: _id,
     from: _from,
     to: _to,
-    layerPercent: {}
+    layerPercent: {},
   };
   return _rarityWeight;
 };
@@ -35,7 +35,7 @@ const getElements = (_path, _elementCount) => {
       return {
         id: _elementCount,
         name: cleanName(i),
-        path: `${_path}/${i}`
+        path: `${_path}/${i}`,
       };
     });
 };
@@ -81,7 +81,7 @@ const addLayer = (_id, _position, _size) => {
     position: _position,
     size: _size,
     elements,
-    elementIdsForRarity
+    elementIdsForRarity,
   };
   return elementsForLayer;
 };
@@ -98,7 +98,7 @@ const addRarityPercentForLayer = (_rarityId, _layerId, _percentages) => {
       for (let percentType in _percentages) {
         _percentArray.push({
           id: percentType,
-          percent: _percentages[percentType]
+          percent: _percentages[percentType],
         });
       }
       _rarityWeight.layerPercent[_layerId] = _percentArray;
@@ -138,7 +138,7 @@ let rarityWeights = [
   addRarity("super_rare", 1, 1),
   addRarity("rare", 1, 1),
   */
-  addRarity("original", 1, editionSize)
+  addRarity("original", 1, editionSize),
 ];
 
 // create required layers
@@ -153,7 +153,7 @@ const layers = [
   addLayer("Mouths"),
   addLayer("Eyes"),
   addLayer("Accessories"),
-  addLayer("Noses")
+  addLayer("Noses"),
 ];
 
 // provide any specific percentages that are required for a given layer and rarity level
@@ -161,7 +161,7 @@ const layers = [
 addRarityPercentForLayer("original", "Eyes", {
   super_rare: 0,
   rare: 0,
-  original: 100
+  original: 100,
 });
 
 module.exports = {
@@ -172,5 +172,5 @@ module.exports = {
   baseImageUri,
   editionSize,
   startEditionFrom,
-  rarityWeights
+  rarityWeights,
 };
